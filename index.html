@@ -37,20 +37,41 @@
 
 <!-- HERO -->
 <section id="hero" class="hero">
-  <div class="wrap">
-    <p class="eyebrow">Full-stack + AI Developer</p>
-    <h1>반복되는 업무를 줄이는<br>서비스를 <em>끝까지</em> 만드는<br>개발자 이동찬입니다.</h1>
-    <p class="lead">AWS 서버리스 백엔드부터 React 화면 연동까지 직접 구현하고, LLM을 실제 서비스에 연결해 왔습니다. 막히면 증상보다 원인부터 확인합니다.</p>
-    <ul class="badges">
-      <li>🏆 한국인공지능융합기술학회 2026 춘계 학술대회 <b>최우수상</b></li>
-      <li>🏅 2025 교내 창업경진대회 <b>우수상</b></li>
-      <li>☁️ AWS Certified AI Practitioner</li>
-    </ul>
-    <div class="cta">
-      <a class="btn primary" href="#projects">프로젝트 보기</a>
-      <a class="btn" href="https://github.com/poro832" target="_blank" rel="noopener">GitHub</a>
-      <a class="btn" href="mailto:ldd0826@naver.com">이메일</a>
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <p class="eyebrow">Full-stack + AI Developer</p>
+      <h1>반복되는 업무를 줄이는<br>서비스를 <em>끝까지</em> 만드는<br>개발자 이동찬입니다.</h1>
+      <p class="lead">AWS 서버리스 백엔드부터 React 화면 연동까지 직접 구현하고, LLM을 실제 서비스에 연결해 왔습니다. 막히면 증상보다 원인부터 확인합니다.</p>
+      <ul class="badges">
+        <li>🏆 한국인공지능융합기술학회 2026 춘계 학술대회 <b>최우수상</b></li>
+        <li>🏅 2025 교내 창업경진대회 <b>우수상</b></li>
+        <li>☁️ AWS Certified AI Practitioner</li>
+      </ul>
+      <div class="cta">
+        <a class="btn primary" href="#projects">프로젝트 보기</a>
+        <a class="btn" href="https://github.com/poro832" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="mailto:ldd0826@naver.com">이메일</a>
+      </div>
     </div>
+    <div class="hero-art" aria-hidden="true">
+      <div class="frame">
+        <div class="frame-bar"><i></i><i></i><i></i><span>LittleBoss</span></div>
+        <img src="img/littleboss.png" alt="" width="880" height="442">
+      </div>
+      <div class="phone"><img src="img/studyreel.png" alt="" width="310" height="560"></div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats" aria-label="핵심 수치">
+  <div class="wrap">
+    <ul>
+      <li class="reveal"><b>5배</b><span>업로드 한도 확장<br>10MB → 50MB</span></li>
+      <li class="reveal"><b>61개</b><span>StudyReel 테스트<br>단위·위젯·E2E·보안 규칙</span></li>
+      <li class="reveal"><b>3종</b><span>FlowTimer 플랫폼<br>Windows · Chrome · Web</span></li>
+      <li class="reveal"><b>2회</b><span>대회 수상<br>최우수상 · 우수상</span></li>
+    </ul>
   </div>
 </section>
 
@@ -85,6 +106,9 @@
         <span class="tag">팀 프로젝트 · ’26.3~6</span>
       </div>
       <h3>LittleBoss — AI 행정 비서</h3>
+      <a class="shot wide" href="https://poro832.github.io/little-boss/" target="_blank" rel="noopener" aria-label="LittleBoss 데모 열기">
+        <img src="img/littleboss.png" alt="LittleBoss 분석 결과 화면: 마감 D-day, 준비 서류 체크리스트, 월간 캘린더" width="880" height="442" loading="lazy">
+      </a>
       <p class="desc">행정 문서를 올리면 AI가 <b>마감일·필요 서류·일정</b>을 뽑아 대시보드와 Google 캘린더로 정리해 주는 LLM 기반 문서 자동 분석 서비스입니다.</p>
 
       <div class="contrib" style="--v:100%">
@@ -132,6 +156,9 @@
       <article class="card reveal">
         <div class="card-head"><span class="tag">개인 프로젝트 · ’26</span></div>
         <h3>StudyReel — 교육용 쇼츠 피드</h3>
+        <a class="shot dark" href="https://poro832.github.io/studyreel-final/app/" target="_blank" rel="noopener" aria-label="StudyReel 앱 소개 열기">
+          <img src="img/studyreel.png" alt="StudyReel 온보딩 화면: 관심 토픽 선택" width="310" height="560" loading="lazy">
+        </a>
         <p class="desc">YouTube Shorts를 앱 안에서 소리·자동재생으로 보는 <b>교육용 세로 피드</b> 학습 앱입니다. 테스트 61개(단위·위젯·E2E 57 + Firestore 보안 규칙 4)로 검증했고, 설계 결정은 ADR 5건으로 기록했습니다.</p>
         <div class="contrib" style="--v:100%">
           <div class="contrib-top"><span>내 기여도 · 기획부터 개발까지 1인 개발</span><b>100%</b></div>
@@ -160,6 +187,9 @@
       <article class="card reveal">
         <div class="card-head"><span class="tag">개인 프로젝트 · ’26</span></div>
         <h3>FlowTimer — 음악과 함께 흐르는 타이머</h3>
+        <a class="shot dark" href="https://poro832.github.io/FlowTimer/" target="_blank" rel="noopener" aria-label="FlowTimer 웹 데모 열기">
+          <img src="img/flowtimer.png" alt="FlowTimer 원형 프로그레스 링 타이머 화면" width="260" height="310" loading="lazy">
+        </a>
         <p class="desc">발표·집중 세션용 카운트다운 타이머입니다. <b>하나의 코어를 공유하는 Windows 앱 · Chrome 확장 · 웹</b> 세 가지 형태로 만들었고, 탭이 백그라운드로 가도 시간이 밀리지 않도록 절대 시각 기반으로 구현했습니다.</p>
         <div class="contrib" style="--v:100%">
           <div class="contrib-top"><span>내 기여도 · 1인 개발</span><b>100%</b></div>
