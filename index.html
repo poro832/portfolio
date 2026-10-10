@@ -67,7 +67,7 @@
 <section class="stats" aria-label="핵심 수치">
   <div class="wrap">
     <ul>
-      <li class="reveal"><b>5배</b><span>업로드 한도 확장<br>10MB → 50MB</span></li>
+      <li class="reveal"><b>직접</b><span>S3 직접 업로드로 변경<br>API Gateway 경유 제거</span></li>
       <li class="reveal"><b>61개</b><span>StudyReel 테스트<br>단위·위젯·E2E·보안 규칙</span></li>
       <li class="reveal"><b>3종</b><span>FlowTimer 플랫폼<br>Windows · Chrome · Web</span></li>
       <li class="reveal"><b>2회</b><span>대회 수상<br>최우수상 · 우수상</span></li>
@@ -128,7 +128,7 @@
         <li>PDF·이미지·DOCX·HWPX 업로드 후 마감·서류·일정을 구조화해 D-day와 체크리스트로 제공</li>
         <li>Google 캘린더 자동 등록(D-7·D-3·D-1 리마인더), Slack 채널 연동, SNS 완료 알림</li>
         <li>이메일 로그인(PBKDF2 + KMS 페퍼 해시) 및 Google OAuth 2.0</li>
-        <li>업로드 한도를 10MB에서 50MB로 확장 — <a href="#troubleshooting">문제 해결 보기</a></li>
+        <li>API Gateway 10MB 제한을 피해 presigned URL 기반 S3 직접 업로드로 변경 — <a href="#troubleshooting">문제 해결 보기</a></li>
       </ul>
 
       <ul class="chips">
@@ -142,15 +142,16 @@
 
     <div class="grid">
       <article class="card reveal">
-        <div class="card-head"><span class="tag win">창업경진대회 우수상</span><span class="tag">팀 프로젝트 · ’25</span></div>
-        <h3>YourConnect — AI 채용 추천</h3>
-        <p class="desc"><b>React 프론트엔드(약 50%)</b>에서 검색·추천 화면을 구현하고 Django REST API와 연동했습니다. 서비스는 여러 채용 사이트(Saramin, GroupBy 등)의 공고를 크롤링해 검색·필터링하고 관심 직무 기반으로 추천하는 커리어 플랫폼입니다.</p>
-        <div class="contrib" style="--v:50%">
-          <div class="contrib-top"><span>내 기여도 · 프론트엔드(React)</span><b>약 50%</b></div>
+        <div class="card-head"><span class="tag ongoing">진행 중</span><span class="tag">팀 프로젝트 · 팀 공명</span></div>
+        <h3>안심케어 — 독거노인 AI 친구 전화</h3>
+        <p class="desc">독거노인에게 AI가 전화를 걸어 말동무가 되어 주고, 보호자는 앱에서 어르신 상태와 건강 경고를 확인하는 팀 서비스입니다. 저는 <b>AWS 서비스 구성과 FastAPI 백엔드 API</b>를 맡아 서버 기능을 구현하고 있습니다. 앱 화면은 팀원이 개발합니다.</p>
+        <ul class="facts"><li><b>구현 완료(테스트 있음):</b> 보호자 개인 코드(8자리) 발급, 어르신의 코드 가입 요청과 보호자 승인·거절, 틀린 가입 코드 시도 횟수 제한(분당 20회)</li><li><b>개발 진행 중:</b> 그 외 기능은 프로젝트와 함께 구현을 이어가고 있습니다.</li></ul>
+        <div class="contrib" style="--v:85%">
+          <div class="contrib-top"><span>내 기여도 · AWS 서비스 · 백엔드 API (화면은 팀원 담당)</span><b>85%</b></div>
           <div class="bar"><i></i></div>
         </div>
-        <ul class="chips"><li>React</li><li>JavaScript</li><li>HTML/CSS</li><li>Django REST API</li></ul>
-        <div class="links"><a href="https://github.com/2025-CAPSTONEpj/YourConnect" target="_blank" rel="noopener">GitHub ↗</a></div>
+        <ul class="chips"><li>Python · FastAPI</li><li>PostgreSQL</li><li>AWS Polly</li><li>CLOVA Voice</li><li>Flutter</li></ul>
+        <div class="links"><a href="https://github.com/poro832/Nulbom" target="_blank" rel="noopener">GitHub ↗</a></div>
       </article>
 
       <article class="card reveal">
@@ -173,18 +174,6 @@
       </article>
 
       <article class="card reveal">
-        <div class="card-head"><span class="tag ongoing">진행 중</span><span class="tag">팀 프로젝트 · 팀 공명</span></div>
-        <h3>안심케어 — 독거노인 AI 친구 전화</h3>
-        <p class="desc">독거노인에게 AI가 전화를 걸어 말동무가 되어 주고, 보호자는 앱에서 어르신 상태와 건강 경고를 확인하는 팀 서비스입니다. 저는 <b>AWS 서비스 구성과 FastAPI 백엔드 API</b>를 맡아 보호자 코드 가입·승인 흐름 같은 서버 기능을 구현하고 있습니다. 앱 화면은 팀원이 개발합니다.</p>
-        <div class="contrib" style="--v:85%">
-          <div class="contrib-top"><span>내 기여도 · AWS 서비스 · 백엔드 API (화면은 팀원 담당)</span><b>85%</b></div>
-          <div class="bar"><i></i></div>
-        </div>
-        <ul class="chips"><li>Python · FastAPI</li><li>PostgreSQL</li><li>AWS Polly</li><li>CLOVA Voice</li><li>Flutter</li></ul>
-        <div class="links"><a href="https://github.com/poro832/Nulbom" target="_blank" rel="noopener">GitHub ↗</a></div>
-      </article>
-
-      <article class="card reveal">
         <div class="card-head"><span class="tag">개인 프로젝트 · ’26</span></div>
         <h3>FlowTimer — 음악과 함께 흐르는 타이머</h3>
         <a class="shot dark" href="https://poro832.github.io/FlowTimer/" target="_blank" rel="noopener" aria-label="FlowTimer 웹 데모 열기">
@@ -200,6 +189,18 @@
           <a href="https://poro832.github.io/FlowTimer/" target="_blank" rel="noopener">웹 데모 ↗</a>
           <a href="https://github.com/poro832/FlowTimer" target="_blank" rel="noopener">GitHub ↗</a>
         </div>
+      </article>
+
+      <article class="card reveal">
+        <div class="card-head"><span class="tag win">창업경진대회 우수상</span><span class="tag">팀 프로젝트 · ’25</span></div>
+        <h3>YourConnect — AI 채용 추천</h3>
+        <p class="desc"><b>React 프론트엔드(약 50%)</b>에서 검색·추천 화면을 구현하고 Django REST API와 연동했습니다. 서비스는 여러 채용 사이트(Saramin, GroupBy 등)의 공고를 크롤링해 검색·필터링하고 관심 직무 기반으로 추천하는 커리어 플랫폼입니다.</p>
+        <div class="contrib" style="--v:50%">
+          <div class="contrib-top"><span>내 기여도 · 프론트엔드(React)</span><b>약 50%</b></div>
+          <div class="bar"><i></i></div>
+        </div>
+        <ul class="chips"><li>React</li><li>JavaScript</li><li>HTML/CSS</li><li>Django REST API</li></ul>
+        <div class="links"><a href="https://github.com/2025-CAPSTONEpj/YourConnect" target="_blank" rel="noopener">GitHub ↗</a></div>
       </article>
     </div>
 
@@ -225,8 +226,8 @@
         <h3>대용량 업로드 실패 → presigned 직접 업로드</h3>
         <dl>
           <dt>문제</dt><dd>파일이 API Gateway를 통과하며 약 10MB 페이로드 한도에 막혀 업로드가 실패했습니다. 코드가 아니라 인프라 제약이었습니다.</dd>
-          <dt>해결</dt><dd>백엔드가 발급한 presigned URL로 브라우저가 S3에 직접 PUT하도록 흐름을 바꿨습니다. URL 발급 → 레코드 저장 순서를 조정해 실패 시 고아 레코드가 남지 않게 하고, 업로드 실패 시 정리 로직까지 설계했습니다.</dd>
-          <dt>결과</dt><dd>업로드 한도 <b>10MB → 50MB</b>(5배), API Gateway·Lambda의 페이로드 부하를 제거했습니다.</dd>
+          <dt>해결</dt><dd>백엔드가 발급한 presigned URL로 브라우저가 S3에 직접 PUT하도록 흐름을 바꿨습니다. URL 발급 → 레코드 저장 순서로 조정해 URL 발급이 실패해도 레코드가 남지 않게 했고, 브라우저의 S3 업로드가 실패하면 클라이언트가 문서 레코드를 삭제하도록 했습니다.</dd>
+          <dt>결과</dt><dd>파일 본문이 API Gateway와 Lambda를 거치지 않고 S3로 바로 올라갑니다. 클라이언트에서 파일 크기를 최대 50MB로 검사합니다. <b>한계:</b> 서버(presigned URL)에는 크기 제한이 없고, 실패 시 정리 동작을 검증하는 자동 테스트도 아직 없습니다.</dd>
         </dl>
       </article>
 
@@ -235,8 +236,8 @@
         <h3>완료 알림 메일: SES 차단 → SNS 전환</h3>
         <dl>
           <dt>문제</dt><dd>분석 완료를 가입 이메일로 알리려 했지만 SES가 IAM 권한 경계에 막혔습니다.</dd>
-          <dt>해결</dt><dd>SNS 토픽과 <code>user_id</code> FilterPolicy 구독 방식으로 바꿨습니다. 가입 시 구독하고, 완료 시 해당 유저에게만 Publish합니다.</dd>
-          <dt>결과</dt><dd>추가 권한 없이 본인에게만 가는 <b>개인화된 완료 알림</b>을 구현했습니다.</dd>
+          <dt>해결</dt><dd>SNS 토픽과 <code>user_id</code> FilterPolicy 구독 방식으로 바꿨습니다. 가입 시 <code>user_id</code> 필터로 구독하고, 완료 시 <code>user_id</code> 속성을 붙여 Publish합니다.</dd>
+          <dt>결과</dt><dd>SES 권한 없이 SNS로 사용자별 완료 알림을 구현했습니다. FilterPolicy 설정과 발행 속성은 단위 테스트로 검증했습니다. <b>한계:</b> 실제 서비스에서 사용자 간 알림 격리를 확인하지는 않았습니다.</dd>
         </dl>
       </article>
 
