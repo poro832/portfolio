@@ -3,296 +3,460 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>이동찬 | 백엔드 개발자 포트폴리오</title>
-<meta name="description" content="요청, 저장, 실패 처리까지 끝까지 보는 백엔드 개발자 이동찬의 포트폴리오입니다.">
-<meta property="og:title" content="이동찬 | 백엔드 개발자 포트폴리오">
-<meta property="og:description" content="Python·SQL 백엔드와 AWS로 서비스를 만들고 Java·Spring을 익히는 백엔드 개발자. 학술대회 최우수상, 창업경진대회 우수상.">
-<meta property="og:type" content="website">
-<meta name="theme-color" content="#0f766e">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230f766e'/%3E%3Ctext x='16' y='22' font-size='17' font-family='sans-serif' font-weight='700' text-anchor='middle' fill='white'%3EDC%3C/text%3E%3C/svg%3E">
+<title>이동찬 | AI 서비스 개발자</title>
+<meta name="description" content="모델이 틀려도, 서비스는 흔들리지 않게. AI 서비스 개발자 이동찬의 포트폴리오입니다.">
+<meta name="theme-color" content="#05070d">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2305070d'/%3E%3Ctext x='16' y='21' font-size='12' font-family='sans-serif' font-weight='700' text-anchor='middle' fill='%234d8dff'%3EDC%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- web fonts load without holding up the page; until they arrive the system font stands in -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" media="print" onload="this.media='all'">
+<noscript>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+</noscript>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <a class="skip" href="#main">본문으로 건너뛰기</a>
 
 <header class="top">
-  <div class="wrap top-in">
-    <a class="brand" href="#hero" aria-label="맨 위로">이동찬</a>
-    <nav id="nav" aria-label="주요 메뉴">
-      <a href="#about">소개</a>
-      <a href="#projects">프로젝트</a>
-      <a href="#troubleshooting">문제 해결</a>
-      <a href="#skills">기술</a>
-      <a href="#experience">경력·수상</a>
-      <a href="#contact">연락</a>
+  <div class="top-in">
+    <a class="logo" href="#home">Dongchan<b>Lee</b></a>
+    <button class="menu" type="button" aria-expanded="false" aria-controls="nav"><span class="sr">메뉴</span><i></i><i></i><i></i></button>
+    <nav class="nav" id="nav" aria-label="섹션">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#deep-dive">Deep Dive</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
     </nav>
-    <div class="top-tools">
-      <button id="theme" class="icon-btn" type="button" aria-label="테마 전환">◐</button>
-      <button id="menu" class="icon-btn menu-btn" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="nav">☰</button>
-    </div>
   </div>
 </header>
 
 <main id="main">
 
-<!-- HERO -->
-<section id="hero" class="hero">
-  <div class="wrap hero-grid">
-    <div class="hero-text">
-      <p class="eyebrow">Backend Developer</p>
-      <h1>요청부터 저장,<br>실패 처리까지 <em>끝까지</em><br>보는 개발자 이동찬입니다.</h1>
-      <p class="lead">Python과 AWS로 백엔드 서비스를 만들며 API 설계, 데이터 저장, 외부 서비스 연동과 오류 처리를 맡아 왔습니다. 수업에서 Java·Spring을 실습했고, 지금은 Spring Boot를 익히고 있습니다. 프론트 연동 경험으로 서비스 전체 흐름도 함께 봅니다.</p>
-      <ul class="badges">
-        <li>🏆 한국인공지능융합기술학회 2026 춘계 학술대회 <b>최우수상</b></li>
-        <li>🏅 2025 교내 창업경진대회 <b>우수상</b></li>
-        <li>☁️ AWS Certified AI Practitioner</li>
-      </ul>
-      <div class="cta">
-        <a class="btn primary" href="#projects">프로젝트 보기</a>
-        <a class="btn" href="https://github.com/poro832" target="_blank" rel="noopener">GitHub</a>
-        <a class="btn" href="mailto:ldd0826@naver.com">이메일</a>
-      </div>
+<!-- Home -->
+<section class="hero" id="home">
+  <div class="wrap hero-in">
+    <div class="hero-copy">
+    <p class="badge">AI Service Developer</p>
+    <h1 class="hero-name">이동찬</h1>
+    <p class="hero-typed" aria-label="음성 AI, 문서 AI, LLM 기반, 검증 가능한 서비스를 만듭니다">
+      <span class="typed" aria-hidden="true">음성 AI</span><span class="caret" aria-hidden="true"></span><span aria-hidden="true"> 서비스를 만듭니다</span>
+    </p>
+    <p class="hero-line">모델이 틀려도, 서비스는 흔들리지 않게.</p>
+    <div class="hero-cta">
+      <a class="btn btn-pri" href="#projects">프로젝트 보기 <span aria-hidden="true">→</span></a>
+      <a class="btn btn-out" href="#contact">연락하기</a>
     </div>
-    <div class="hero-art" aria-hidden="true">
-      <div class="frame">
-        <div class="frame-bar"><i></i><i></i><i></i><span>LittleBoss</span></div>
-        <img src="img/littleboss.png" alt="" width="880" height="442">
-      </div>
-      <div class="phone"><img src="img/studyreel.png" alt="" width="310" height="560"></div>
     </div>
-  </div>
-</section>
-
-<!-- STATS -->
-<section class="stats" aria-label="핵심 수치">
-  <div class="wrap">
-    <ul>
-      <li class="reveal"><b>직접</b><span>S3 직접 업로드로 변경<br>API Gateway 경유 제거</span></li>
-      <li class="reveal"><b>61개</b><span>StudyReel 테스트<br>단위·위젯·E2E·보안 규칙</span></li>
-      <li class="reveal"><b>3종</b><span>FlowTimer 플랫폼<br>Windows · Chrome · Web</span></li>
-      <li class="reveal"><b>2회</b><span>대회 수상<br>최우수상 · 우수상</span></li>
+    <div class="orbit" role="img" aria-label="DC 행성이 지구처럼 자전하며, 늘봄·LittleBoss 등 직접 만든 프로젝트가 대륙으로 지나가고, 그 둘레로 AI 모델과 개발 도구 로고가 궤도를 도는 3D 그림.">
+    <div class="orbit-stage" aria-hidden="true">
+      <svg class="paths paths-back" width="1" height="1" overflow="visible"></svg>
+      <div class="planet">
+        <div class="globe3d">
+          <div class="orb"><canvas class="earth" width="700" height="700"></canvas></div>
+          <div class="planet-mark"><span class="orb-mark">DC</span><span class="orb-sub">AI SERVICE DEVELOPER</span></div>
+        </div>
+      </div>
+      <span class="city" data-lon="0" data-lat="20" data-size="40" data-tone="0"><b>늘봄</b></span>
+      <span class="city" data-lon="78" data-lat="-16" data-size="42" data-tone="1"><b>LittleBoss</b></span>
+      <span class="city" data-lon="150" data-lat="30" data-size="30" data-tone="2"><b>StudyReel</b></span>
+      <span class="city" data-lon="200" data-lat="-30" data-size="21" data-tone="0"><b>Keel</b></span>
+      <span class="city" data-lon="236" data-lat="18" data-size="28" data-tone="1"><b>3DayOfAI</b></span>
+      <span class="city" data-lon="280" data-lat="-30" data-size="27" data-tone="2"><b>LocalArchive</b></span>
+      <span class="city" data-lon="312" data-lat="50" data-size="20" data-tone="1"><b>FlowTimer</b></span>
+      <span class="city" data-lon="28" data-lat="-50" data-size="23" data-tone="2"><b>YourConnect</b></span>
+      <svg class="paths paths-front" width="1" height="1" overflow="visible"></svg>
+      <span class="sat sat-ai" data-ring="0" title="Amazon Bedrock"><img src="img/tech/aws.svg" alt="" width="30" height="30"></span>
+      <span class="sat sat-ai" data-ring="0" title="Claude"><img src="img/tech/claude.svg" alt="" width="30" height="30"></span>
+      <span class="sat sat-ai" data-ring="0" title="Gemini"><img src="img/tech/googlegemini.svg" alt="" width="30" height="30"></span>
+      <span class="sat sat-ai" data-ring="0" title="CLOVA"><img src="img/tech/naver.svg" alt="" width="30" height="30"></span>
+      <span class="sat sat-ai" data-ring="0" title="Snowflake Cortex"><img src="img/tech/snowflake.svg" alt="" width="30" height="30"></span>
+      <span class="sat sat-ai" data-ring="0" title="Streamlit"><img src="img/tech/streamlit.svg" alt="" width="30" height="30"></span>
+      <span class="sat sat-dev" data-ring="1" title="Python"><img src="img/tech/python.svg" alt="" width="26" height="26"></span>
+      <span class="sat sat-dev" data-ring="1" title="FastAPI"><img src="img/tech/fastapi.svg" alt="" width="26" height="26"></span>
+      <span class="sat sat-dev" data-ring="1" title="PostgreSQL"><img src="img/tech/postgresql.svg" alt="" width="26" height="26"></span>
+      <span class="sat sat-dev" data-ring="1" title="React"><img src="img/tech/react.svg" alt="" width="26" height="26"></span>
+      <span class="sat sat-dev" data-ring="1" title="Flutter"><img src="img/tech/flutter.svg" alt="" width="26" height="26"></span>
+      <span class="sat sat-dev" data-ring="1" title="Firebase"><img src="img/tech/firebase.svg" alt="" width="26" height="26"></span>
+      <span class="sat sat-dev" data-ring="1" title="GitHub Actions"><img src="img/tech/githubactions.svg" alt="" width="26" height="26"></span>
+      <span class="sat sat-dev" data-ring="1" title="Caddy"><img src="img/tech/caddy.svg" alt="" width="26" height="26"></span>
+    </div>
+    </div>
+    <ul class="stats" aria-label="숫자로 보는 이동찬">
+      <li><b>최우수상</b><span>AI 융합 학술대회 · LittleBoss</span></li>
+      <li><b>100<small>회</small></b><span>같은 녹음, 같은 결과 · 늘봄</span></li>
+      <li><b>32<small>개</small></b><span>AI 실습 설계 · NxtCloud</span></li>
+      <li><b>AIF-C01</b><span>AWS AI Practitioner</span></li>
     </ul>
   </div>
 </section>
 
-<!-- ABOUT -->
-<section id="about" class="sec">
+<!-- About -->
+<section class="sec" id="about" aria-labelledby="about-h">
   <div class="wrap">
-    <h2 class="reveal">소개</h2>
-    <div class="about-grid">
-      <div class="reveal">
-        <p>신구대학교 컴퓨터소프트웨어과 3학년(2027년 2월 졸업 예정, 평점 4.1 / 4.5)입니다. 졸업 프로젝트 <b>LittleBoss</b>에서는 문서 업로드부터 OCR, LLM 분석, 캘린더 등록까지 이어지는 AWS 서버리스 백엔드와 시스템 설정을 맡았고, 프론트와의 연동까지 완성했습니다.</p>
-        <p>클라우드 회사 NxtCloud에서 교육 인턴(Technical Trainer 주니어)으로 여러 대학의 교직원·학생에게 AWS를 가르쳤고, 30일 분량의 AI 실습 과정을 학습자가 코드를 직접 채우는 3일 과정(32개 실습)으로 재구성했습니다.</p>
+    <div class="sec-head" data-reveal>
+      <h2 id="about-h">About <em>Me</em></h2>
+      <p>어떤 개발자인지 짧게 소개합니다.</p>
+    </div>
+    <div class="about">
+      <div class="profile" data-reveal>
+        <div class="profile-card">
+          <span class="profile-mark" aria-hidden="true">DC</span>
+          <p class="profile-name">이동찬</p>
+          <p class="profile-role">AI Service Developer</p>
+          <ul class="profile-facts">
+            <li><span>학교</span>신구대 컴퓨터소프트웨어과</li>
+            <li><span>학교 활동</span>학과 과대표 · 장학금 5회</li>
+          </ul>
+        </div>
+        <p class="profile-pin">최우수상 · AI 융합 학술대회</p>
       </div>
-      <ul class="points reveal">
-        <li><b>실패까지 설계하는 백엔드</b><span>업로드 실패 시 레코드 삭제 시도, Slack 재시도 중복 방지, 권한 제약을 피한 SNS 알림까지 요청–저장–실패 흐름을 직접 설계했습니다.</span></li>
-        <li><b>프론트 연동과 배포·운영</b><span>React 연동, AWS 서버리스 배포, Google OAuth·Slack 연동까지 직접 맡았습니다.</span></li>
-        <li><b>AI는 기능으로 연결</b><span>LittleBoss 안에 Bedrock(Claude)·Textract 분석 파이프라인을 붙였습니다. 가설–검증으로 원인을 좁히는 방식으로 일합니다.</span></li>
-      </ul>
+      <div class="about-text" data-reveal>
+        <h3>LLM을 서비스에 넣고,<br>틀려도 흔들리지 않게 만듭니다.</h3>
+        <p>음성 AI 안부 전화, 문서 AI 행정 비서, AI 실습 과정을 만들었습니다. 모델이 맡을 일과 규칙이 맡을 일을 먼저 나누고, 결과는 테스트로 확인합니다.</p>
+        <ul class="checks">
+          <li>LLM은 대화만, 판단은 규칙으로</li>
+          <li>모델 출력은 검증 후 저장</li>
+          <li>모델 공급자를 바꿔도 코드는 그대로</li>
+          <li>토큰 한도·비용은 재 보고 결정</li>
+          <li>AWS 서버리스·EC2 배포</li>
+          <li>에이전트 작업 규칙 플러그인 제작</li>
+        </ul>
+        <blockquote>“AI 출력은 항상 화면·로그·테스트로 끝을 본다.”<cite>StudyReel 발표에서</cite></blockquote>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- PROJECTS -->
-<section id="projects" class="sec alt">
+<!-- Skills -->
+<section class="sec sec-alt" id="skills" aria-labelledby="skills-h">
   <div class="wrap">
-    <h2 class="reveal">프로젝트</h2>
-    <p class="sub reveal">기여도는 팀 프로젝트 안에서 제가 맡은 범위를 기준으로 적었습니다.</p>
-
-    <!-- Featured -->
-    <article class="card featured reveal">
-      <div class="card-head">
-        <span class="tag win">학술대회 최우수상</span>
-        <span class="tag">팀 프로젝트 · ’26.3~6</span>
-      </div>
-      <h3>LittleBoss — AI 행정 비서</h3>
-      <a class="shot wide" href="https://poro832.github.io/little-boss/" target="_blank" rel="noopener" aria-label="LittleBoss 데모 열기">
-        <img src="img/littleboss.png" alt="LittleBoss 분석 결과 화면: 마감 D-day, 준비 서류 체크리스트, 월간 캘린더" width="880" height="442" loading="lazy">
-      </a>
-      <p class="desc">행정 문서를 올리면 AI가 <b>마감일·필요 서류·일정</b>을 뽑아 대시보드와 Google 캘린더로 정리해 주는 LLM 기반 문서 자동 분석 서비스입니다.</p>
-
-      <div class="contrib" style="--v:85%">
-        <div class="contrib-top"><span>내 기여도 · 백엔드 · AWS 시스템 설정 · 프론트 연동 (화면 디자인은 팀원 담당)</span><b>85%</b></div>
-        <div class="bar"><i></i></div>
-      </div>
-
-      <ol class="flow" aria-label="처리 흐름">
-        <li>업로드<small>presigned URL</small></li>
-        <li>S3 저장<small>이벤트 발생</small></li>
-        <li>OCR<small>Textract · 파서</small></li>
-        <li>AI 분석<small>Bedrock (Claude)</small></li>
-        <li>정리<small>대시보드 · 캘린더</small></li>
-      </ol>
-
-      <ul class="facts">
-        <li>PDF·이미지·DOCX·HWPX 업로드 후 마감·서류·일정을 구조화해 D-day와 체크리스트로 제공</li>
-        <li>Google 캘린더 자동 등록(D-7·D-3·D-1 리마인더), Slack 채널 연동, SNS 완료 알림</li>
-        <li>이메일 로그인(PBKDF2 + KMS 페퍼 해시) 및 Google OAuth 2.0</li>
-        <li>API Gateway 요청 본문 크기 제한(약 10MB)으로 실패하던 업로드를 presigned URL 기반 S3 직접 업로드로 변경 — <a href="#troubleshooting">문제 해결 보기</a></li>
-      </ul>
-
-      <ul class="chips">
-        <li>Python 3.11</li><li>AWS Lambda</li><li>API Gateway</li><li>DynamoDB</li><li>S3</li><li>Bedrock</li><li>Textract</li><li>SNS</li><li>KMS</li><li>React · Vite</li>
-      </ul>
-      <div class="links">
-        <a href="https://poro832.github.io/little-boss/" target="_blank" rel="noopener">데모 ↗</a>
-        <a href="https://github.com/poro832/little-boss" target="_blank" rel="noopener">GitHub ↗</a>
-      </div>
-    </article>
-
-    <div class="grid">
-      <article class="card reveal">
-        <div class="card-head"><span class="tag ongoing">진행 중</span><span class="tag">팀 프로젝트 · 팀 공명 · ’26.9~</span></div>
-        <h3>안심케어 — 독거노인 AI 친구 전화</h3>
-        <p class="desc">AI가 독거 어르신에게 전화를 걸어 안부를 확인하고, 통화 기반 지표를 분석해 보호자가 위험 신호를 확인할 수 있도록 개발 중인 팀 서비스입니다. 저는 <b>AWS 서비스 구성과 FastAPI 백엔드 API</b>를 맡아 서버 기능을 구현하고 있습니다. 앱 화면은 팀원이 개발합니다.</p>
-        <ul class="facts"><li><b>구현 완료(테스트 있음):</b> 보호자 개인 코드(8자리) 발급, 어르신의 코드 가입 요청과 보호자 승인·거절, 틀린 가입 코드 시도 횟수 제한(분당 20회), 통화 지표로 위험 점수를 계산하는 규칙 기반 로직(LLM은 점수에 관여하지 않음)과 위험 상승·미응답 시 보호자 알림 생성</li><li><b>개발 진행 중:</b> 그 외 기능은 프로젝트와 함께 구현을 이어가고 있습니다.</li></ul>
-        <div class="contrib" style="--v:85%">
-          <div class="contrib-top"><span>내 기여도 · AWS 서비스 · 백엔드 API (화면은 팀원 담당)</span><b>85%</b></div>
-          <div class="bar"><i></i></div>
-        </div>
-        <ul class="chips"><li>Python · FastAPI</li><li>PostgreSQL</li><li>CLOVA Speech (STT)</li><li>Prosody (TTS)</li><li>Flutter</li></ul>
-        <div class="links"><a href="https://github.com/poro832/Nulbom" target="_blank" rel="noopener">GitHub ↗</a></div>
-      </article>
-
-      <article class="card reveal">
-        <div class="card-head"><span class="tag">개인 프로젝트 · ’26.4~6</span></div>
-        <h3>StudyReel — 교육용 쇼츠 피드</h3>
-        <a class="shot dark" href="https://poro832.github.io/studyreel-final/app/" target="_blank" rel="noopener" aria-label="StudyReel 앱 소개 열기">
-          <img src="img/studyreel.png" alt="StudyReel 온보딩 화면: 관심 토픽 선택" width="310" height="560" loading="lazy">
-        </a>
-        <p class="desc">YouTube Shorts를 앱 안에서 소리·자동재생으로 보는 <b>교육용 세로 피드</b> 학습 앱입니다. 테스트 61개(단위·위젯·E2E 57 + Firestore 보안 규칙 4)로 검증했고, 설계 결정은 ADR 5건으로 기록했습니다.</p>
-        <div class="contrib" style="--v:100%">
-          <div class="contrib-top"><span>내 기여도 · 기획부터 개발까지 1인 개발</span><b>100%</b></div>
-          <div class="bar"><i></i></div>
-        </div>
-        <ul class="chips"><li>Flutter</li><li>Riverpod</li><li>go_router</li><li>Firebase</li><li>YouTube Data API</li><li>TDD</li></ul>
-        <div class="links">
-          <a href="https://poro832.github.io/studyreel-final/app/" target="_blank" rel="noopener">앱 소개 ↗</a>
-          <a href="https://poro832.github.io/studyreel-final/" target="_blank" rel="noopener">발표 자료 ↗</a>
-          <a href="https://github.com/poro832/StudyReel" target="_blank" rel="noopener">GitHub ↗</a>
-        </div>
-      </article>
-
-      <article class="card reveal">
-        <div class="card-head"><span class="tag">개인 프로젝트 · ’26.3~6</span></div>
-        <h3>FlowTimer — 음악과 함께 흐르는 타이머</h3>
-        <a class="shot dark" href="https://poro832.github.io/FlowTimer/" target="_blank" rel="noopener" aria-label="FlowTimer 웹 데모 열기">
-          <img src="img/flowtimer.png" alt="FlowTimer 원형 프로그레스 링 타이머 화면" width="260" height="310" loading="lazy">
-        </a>
-        <p class="desc">발표·집중 세션용 카운트다운 타이머입니다. <b>하나의 코어를 공유하는 Windows 앱 · Chrome 확장 · 웹</b> 세 가지 형태로 만들었고, 탭이 백그라운드로 가도 시간이 밀리지 않도록 절대 시각 기반으로 구현했습니다.</p>
-        <div class="contrib" style="--v:100%">
-          <div class="contrib-top"><span>내 기여도 · 1인 개발</span><b>100%</b></div>
-          <div class="bar"><i></i></div>
-        </div>
-        <ul class="chips"><li>JavaScript</li><li>Electron</li><li>Chrome Extension (MV3)</li><li>Web Audio API</li><li>GitHub Actions</li></ul>
-        <div class="links">
-          <a href="https://poro832.github.io/FlowTimer/" target="_blank" rel="noopener">웹 데모 ↗</a>
-          <a href="https://github.com/poro832/FlowTimer" target="_blank" rel="noopener">GitHub ↗</a>
-        </div>
-      </article>
-
-      <article class="card reveal">
-        <div class="card-head"><span class="tag win">창업경진대회 우수상</span><span class="tag">팀 프로젝트 · ’25.9~’26.6</span></div>
-        <h3>YourConnect — AI 채용 추천</h3>
-        <p class="desc"><b>React 프론트엔드(약 50%)</b>에서 검색·추천 화면을 구현하고 Django REST API와 연동했습니다. 서비스는 여러 채용 사이트(Saramin, GroupBy 등)의 공고를 크롤링해 검색·필터링하고 관심 직무 기반으로 추천하는 커리어 플랫폼입니다.</p>
-        <div class="contrib" style="--v:50%">
-          <div class="contrib-top"><span>내 기여도 · 프론트엔드(React)</span><b>약 50%</b></div>
-          <div class="bar"><i></i></div>
-        </div>
-        <ul class="chips"><li>React</li><li>JavaScript</li><li>HTML/CSS</li><li>Django REST API</li></ul>
-        <div class="links"><a href="https://github.com/2025-CAPSTONEpj/YourConnect" target="_blank" rel="noopener">GitHub ↗</a></div>
-      </article>
+    <div class="sec-head" data-reveal>
+      <h2 id="skills-h">My <em>Skills</em></h2>
+      <p>프로젝트에서 중심으로 쓴 기술입니다.</p>
     </div>
-
-    <h3 class="mini-h reveal">그 외 작업</h3>
-    <ul class="more reveal">
-      <li><a href="https://github.com/poro832/Keel" target="_blank" rel="noopener"><b>Keel</b></a><span>Claude Code 워크플로우 플러그인. 한 줄 Route 선언, 범위 이탈 시 중단, 증거 인용 없이는 "완료" 금지 같은 규칙을 스킬·훅으로 구현</span></li>
-      <li><a href="https://github.com/poro832/MD-Filemanager" target="_blank" rel="noopener"><b>MD-Filemanager</b></a><span>학습용 Markdown을 Notion 페이지로 일괄 업로드·자동 감시하는 Python 도구와 정리 포맷 가이드</span></li>
-      <li><a href="https://github.com/poro832/Sortis-louge-like-game" target="_blank" rel="noopener"><b>Sortis</b></a><span>타로 스프레드로 싸우는 로그라이크 덱빌더 (Godot 4 · C#, 기획·프로토타입 단계)</span></li>
-      <li><a href="https://poro832.github.io/super-evolution-story/" target="_blank" rel="noopener"><b>슈퍼 진화 스토리 공략 사이트</b></a><span>모바일 게임 비공식 팬 공략 사이트 (순수 HTML/CSS/JS, GitHub Pages)</span></li>
-    </ul>
-  </div>
-</section>
-
-<!-- TROUBLESHOOTING -->
-<section id="troubleshooting" class="sec">
-  <div class="wrap">
-    <h2 class="reveal">문제 해결</h2>
-    <p class="sub reveal">코드만으로는 풀리지 않는 제약을 만났을 때, 원인을 끝까지 따라간 기록입니다.</p>
-
-    <div class="trouble">
-      <article class="card reveal">
-        <span class="tag">LittleBoss · 인프라 제약</span>
-        <h3>대용량 업로드 실패 → presigned 직접 업로드</h3>
-        <dl>
-          <dt>문제</dt><dd>파일이 API Gateway를 통과하며 약 10MB 페이로드 한도에 막혀 업로드가 실패했습니다. 코드가 아니라 인프라 제약이었습니다.</dd>
-          <dt>해결</dt><dd>백엔드가 발급한 presigned URL로 브라우저가 S3에 직접 PUT하도록 흐름을 바꿨습니다. URL 발급 → 레코드 저장 순서로 조정해 URL 발급이 실패해도 레코드가 남지 않게 했고, 브라우저의 S3 업로드가 실패하면 프론트엔드가 문서 레코드 삭제를 시도하도록 했습니다.</dd>
-          <dt>결과</dt><dd>파일 본문이 API Gateway와 Lambda를 거치지 않고 S3로 바로 올라갑니다. 클라이언트에서 파일 크기를 최대 50MB로 검사합니다. <b>한계:</b> 삭제 요청이 실패하거나 브라우저가 중단되면 레코드가 남을 수 있고, 서버(presigned URL)에는 크기 제한이 없습니다. 실패 시 정리 동작을 검증하는 자동 테스트도 아직 없습니다. 이 경험으로 실패 경로에 남는 데이터까지 고려해야 한다는 점을 배웠습니다.</dd>
-        </dl>
-      </article>
-
-      <article class="card reveal">
-        <span class="tag">LittleBoss · 권한 제약</span>
-        <h3>완료 알림 메일: SES 차단 → SNS 전환</h3>
-        <dl>
-          <dt>문제</dt><dd>분석 완료를 가입 이메일로 알리려 했지만 SES가 IAM 권한 경계에 막혔습니다.</dd>
-          <dt>해결</dt><dd>SNS 토픽과 <code>user_id</code> FilterPolicy 구독 방식으로 바꿨습니다. 가입 시 <code>user_id</code> 필터로 구독하고, 완료 시 <code>user_id</code> 속성을 붙여 Publish합니다.</dd>
-          <dt>결과</dt><dd>SES 권한 없이 SNS로 사용자별 완료 알림을 구현했습니다. FilterPolicy 설정과 발행 속성은 단위 테스트로 검증했습니다. <b>한계:</b> 실제 서비스에서 사용자 간 알림 격리를 확인하지는 않았습니다.</dd>
-        </dl>
-      </article>
-
-      <article class="card reveal">
-        <span class="tag">StudyReel · 가설–검증</span>
-        <h3>YouTube Shorts 인앱 재생 <code>error 152</code> 돌파</h3>
-        <dl>
-          <dt>문제</dt><dd>검색되는 거의 모든 Shorts가 인앱 임베드 시 <code>error 152</code>로 막혔습니다. API의 <code>embeddable=true</code> 플래그도 믿을 수 없었습니다.</dd>
-          <dt>해결</dt><dd>처음엔 WebView 합성 문제로 진단했지만, 실기기에서 YouTube 에러 UI가 또렷이 보이는 것을 확인하고 콘텐츠 측 임베드 정책이 원인임을 좁혔습니다. 재생 패키지 소스에서 임베드 호스트를 쓴다는 점을 확인해 <code>youtube-nocookie</code> 호스트로 교체했습니다.</dd>
-          <dt>결과</dt><dd>152가 사라지고 소리 자동재생까지 실기기에서 확인했습니다. <b>API 플래그를 맹신하지 않고, 에뮬레이터 대신 실기기로 검증한다</b>는 원칙을 얻었습니다.</dd>
-        </dl>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- SKILLS -->
-<section id="skills" class="sec alt">
-  <div class="wrap">
-    <h2 class="reveal">기술</h2>
     <div class="skills">
-      <div class="skill reveal"><h3>Back-end</h3><ul class="chips"><li>Python</li><li>FastAPI</li><li>SQL · PostgreSQL</li><li>Java · Spring MVC·Security (수업 실습)</li><li>Spring Boot (수강 중)</li></ul></div>
-      <div class="skill reveal"><h3>Front-end</h3><ul class="chips"><li>React</li><li>JavaScript</li><li>HTML/CSS</li></ul></div>
-      <div class="skill reveal"><h3>Cloud</h3><ul class="chips"><li>EC2</li><li>Lambda</li><li>S3</li><li>DynamoDB</li><li>API Gateway</li><li>SNS</li><li>CloudWatch</li><li>KMS</li><li>Firebase</li></ul></div>
-      <div class="skill reveal"><h3>AI / LLM</h3><ul class="chips"><li>Amazon Bedrock (Claude)</li><li>Textract</li><li>프롬프트 엔지니어링</li><li>LLM 파이프라인</li></ul></div>
-      <div class="skill reveal"><h3>Mobile</h3><ul class="chips"><li>Flutter</li><li>Dart</li><li>Riverpod</li></ul></div>
-      <div class="skill reveal"><h3>CS · 협업</h3><ul class="chips"><li>자료구조</li><li>알고리즘</li><li>데이터베이스</li><li>Git / GitHub</li><li>TDD</li></ul></div>
+      <article class="skill-card" data-reveal>
+        <h3><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M6 6l2 2M16 16l2 2M6 18l2-2M16 8l2-2"/><circle cx="12" cy="12" r="3.5"/></svg></span>AI · LLM</h3>
+        <ul class="skill-tiles">
+          <li><img src="img/tech/aws.svg" alt="" width="40" height="40"><span>Amazon Bedrock</span></li>
+          <li><img src="img/tech/claude.svg" alt="" width="40" height="40"><span>Claude</span></li>
+          <li><img src="img/tech/googlegemini.svg" alt="" width="40" height="40"><span>Gemini</span></li>
+          <li><img src="img/tech/naver.svg" alt="" width="40" height="40"><span>CLOVA</span></li>
+        </ul>
+      </article>
+      <article class="skill-card" data-reveal>
+        <h3><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="6" rx="1.5"/><rect x="4" y="14" width="16" height="6" rx="1.5"/><path d="M8 7h.01M8 17h.01"/></svg></span>Backend</h3>
+        <ul class="skill-tiles">
+          <li><img src="img/tech/python.svg" alt="" width="40" height="40"><span>Python</span></li>
+          <li><img src="img/tech/fastapi.svg" alt="" width="40" height="40"><span>FastAPI</span></li>
+          <li><img src="img/tech/postgresql.svg" alt="" width="40" height="40"><span>PostgreSQL</span></li>
+        </ul>
+      </article>
+      <article class="skill-card" data-reveal>
+        <h3><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 18h10a4 4 0 0 0 .5-7.97A6 6 0 0 0 6.1 9.5 4.25 4.25 0 0 0 7 18z"/></svg></span>Cloud</h3>
+        <ul class="skill-tiles">
+          <li><img src="img/tech/aws.svg" alt="" width="40" height="40"><span>AWS</span></li>
+          <li><img src="img/tech/githubactions.svg" alt="" width="40" height="40"><span>GitHub Actions</span></li>
+          <li><img src="img/tech/caddy.svg" alt="" width="40" height="40"><span>Caddy</span></li>
+        </ul>
+      </article>
+      <article class="skill-card" data-reveal>
+        <h3><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14"/></svg></span>Frontend · App</h3>
+        <ul class="skill-tiles">
+          <li><img src="img/tech/react.svg" alt="" width="40" height="40"><span>React</span></li>
+          <li><img src="img/tech/flutter.svg" alt="" width="40" height="40"><span>Flutter</span></li>
+          <li><img src="img/tech/javascript.svg" alt="" width="40" height="40"><span>JavaScript</span></li>
+          <li><img src="img/tech/firebase.svg" alt="" width="40" height="40"><span>Firebase</span></li>
+        </ul>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- EXPERIENCE -->
-<section id="experience" class="sec">
+<!-- Projects -->
+<section class="sec" id="projects" aria-labelledby="projects-h">
   <div class="wrap">
-    <h2 class="reveal">경력 · 수상</h2>
-    <ul class="timeline">
-      <li class="reveal"><time>2026.03 – 06</time><div><b>한국인공지능융합기술학회 2026 춘계 학술대회 최우수상</b><span>졸업 프로젝트 LittleBoss로 논문 심사와 현장 발표를 거쳐 수상</span></div></li>
-      <li class="reveal"><time>2026.01 – 02</time><div><b>NxtCloud 교육 인턴 · Technical Trainer 주니어</b><span>한양대·국민대·경희대 등 여러 대학의 교직원·학생에게 AWS 핵심 개념과 실습을 진행하고, AI를 활용해 실습 자료와 교육용 툴을 직접 제작</span><div class="links"><a href="https://github.com/poro832/3DayOfAI" target="_blank" rel="noopener">3DayOfAI · 교육용 3일 프로젝트 결과물 ↗</a><a href="https://github.com/streamlit/30DaysOfAI" target="_blank" rel="noopener">원본 30DaysOfAI ↗</a></div></div></li>
-      <li class="reveal"><time>2025</time><div><b>교내 창업경진대회 우수상</b><span>YourConnect의 프론트엔드 개발</span></div></li>
-      <li class="reveal"><time>2024.09 – 현재</time><div><b>학과 과대표</b><span>1학년 2학기부터 공지·행사 운영과 동기·교수님 간 소통을 담당</span></div></li>
-      <li class="reveal"><time>2024 – 2026</time><div><b>성적우수장학금 2회 · 모범장학 3회</b><span>’25-1·’26-1 성적우수, ’24-2·’25-2·’26-2 모범장학</span></div></li>
-      <li class="reveal"><time>자격증</time><div><b>AWS Certified AI Practitioner (AIF-C01)</b></div></li>
-    </ul>
+    <div class="sec-head" data-reveal>
+      <h2 id="projects-h">My <em>Projects</em></h2>
+      <p>AI 서비스부터 클라우드, 화면까지 직접 만든 작업입니다.</p>
+    </div>
+    <div class="filters" role="group" aria-label="프로젝트 분류" data-reveal>
+      <button type="button" data-f="all" aria-pressed="true">전체</button>
+      <button type="button" data-f="ai" aria-pressed="false">AI</button>
+      <button type="button" data-f="cloud" aria-pressed="false">클라우드</button>
+      <button type="button" data-f="front" aria-pressed="false">프론트 · 앱</button>
+      <button type="button" data-f="tool" aria-pressed="false">도구 · 교육</button>
+    </div>
+    <div class="grid" id="grid">
+      <article class="proj" data-cat="ai cloud">
+        <div class="proj-img"><img src="img/t-nulbom.jpg" alt="늘봄 보호자 앱의 주간 감정 추이 화면" width="640" height="400" loading="lazy"><span class="proj-flag">진행 중</span></div>
+        <div class="proj-body">
+          <h3>늘봄 <span>AI 안부 전화</span></h3>
+          <p>AI가 어르신께 전화를 걸어 안부를 묻고, 위험 신호를 보호자에게 전합니다.</p>
+          <p class="proj-meta">’26.9~ · 기여도 85% · 화면은 팀원</p>
+          <ul class="tags"><li>Python</li><li>FastAPI</li><li>CLOVA</li><li>Prosody</li><li>PostgreSQL</li><li>EC2</li></ul>
+          <div class="proj-links"><a href="#deep-dive" data-tab="voice">자세히</a><a href="https://github.com/poro832/Nulbom">GitHub <span aria-hidden="true">↗</span></a></div>
+        </div>
+      </article>
+      <article class="proj" data-cat="ai cloud">
+        <div class="proj-img"><img src="img/t-littleboss.jpg" alt="LittleBoss 첫 화면" width="640" height="400" loading="lazy"><span class="proj-flag">최우수상</span></div>
+        <div class="proj-body">
+          <h3>LittleBoss <span>AI 행정 비서</span></h3>
+          <p>문서를 올리면 마감일·필요 서류·일정을 뽑아 캘린더로 정리합니다.</p>
+          <p class="proj-meta">’26.3~6, ’26.9 UI 재설계 · 기여도 85% · 시안은 팀원</p>
+          <ul class="tags"><li>Bedrock</li><li>Textract</li><li>Lambda</li><li>S3</li><li>React</li></ul>
+          <div class="proj-links"><a href="#deep-dive" data-tab="doc">자세히</a><a href="https://poro832.github.io/little-boss/">데모 <span aria-hidden="true">↗</span></a><a href="https://github.com/poro832/little-boss">GitHub <span aria-hidden="true">↗</span></a></div>
+        </div>
+      </article>
+      <article class="proj" data-cat="ai front">
+        <div class="proj-img"><img src="img/t-studyreel.jpg" alt="StudyReel 관심 분야 선택 화면" width="640" height="400" loading="lazy"></div>
+        <div class="proj-body">
+          <h3>StudyReel <span>교육용 쇼츠 피드</span></h3>
+          <p>Gemini 토큰 한도를 실측해 Shorts 피드로 전환했습니다. 테스트 61개, ADR 5건.</p>
+          <p class="proj-meta">’26.4~6 · 개인 개발</p>
+          <ul class="tags"><li>Flutter</li><li>Firebase</li><li>Gemini</li><li>YouTube API</li></ul>
+          <div class="proj-links"><a href="#deep-dive" data-tab="flow">자세히</a><a href="https://poro832.github.io/studyreel-final/app/">앱 소개 <span aria-hidden="true">↗</span></a><a href="https://github.com/poro832/StudyReel">GitHub <span aria-hidden="true">↗</span></a></div>
+        </div>
+      </article>
+      <article class="proj" data-cat="ai tool">
+        <div class="proj-img"><img src="img/t-keel.jpg" alt="Keel의 버그 수정 경로 안내 화면" width="640" height="400" loading="lazy"><span class="proj-flag">MIT 공개</span></div>
+        <div class="proj-body">
+          <h3>Keel <span>에이전트 작업 규칙</span></h3>
+          <p>범위 정지 · 가설 하나 · 증거 인용 규칙을 Claude Code에 적용하는 플러그인입니다.</p>
+          <p class="proj-meta">’26.4 · 개인 개발</p>
+          <ul class="tags"><li>Claude Code</li><li>스킬 · 훅</li></ul>
+          <div class="proj-links"><a href="#deep-dive" data-tab="flow">자세히</a><a href="https://github.com/poro832/Keel">GitHub <span aria-hidden="true">↗</span></a></div>
+        </div>
+      </article>
+      <article class="proj" data-cat="ai tool">
+        <div class="proj-img proj-cover" aria-hidden="true"><span class="cover-logos"><img src="img/tech/streamlit.svg" alt="" width="40" height="40"><img src="img/tech/snowflake.svg" alt="" width="40" height="40"></span><span class="cover-text">챗봇 → RAG → 에이전트</span></div>
+        <div class="proj-body">
+          <h3>3DayOfAI <span>AI 실습 과정</span></h3>
+          <p>30일 과정을 3일로 다시 짰습니다. 문제·정답 짝으로 설계한 실습 32개.</p>
+          <p class="proj-meta">’26.1~2 · NxtCloud 교육 인턴</p>
+          <ul class="tags"><li>Streamlit</li><li>Snowflake Cortex</li><li>Python</li></ul>
+          <div class="proj-links"><a href="https://github.com/poro832/3DayOfAI">GitHub <span aria-hidden="true">↗</span></a></div>
+        </div>
+      </article>
+      <article class="proj" data-cat="cloud">
+        <div class="proj-img proj-cover"><span class="cover-logos" aria-hidden="true"><img src="img/tech/aws.svg" alt="" width="40" height="40"><img src="img/tech/chartdotjs.svg" alt="" width="40" height="40"></span><span class="cover-text">CloudWatch → 운영현황 페이지</span><span class="proj-flag">의뢰 작업</span></div>
+        <div class="proj-body">
+          <h3>LocalArchive <span>AWS 운영 모니터링</span></h3>
+          <p>CloudWatch 알람 6종과 SNS 장애 메일, 지표를 보여 주는 운영현황 페이지.</p>
+          <p class="proj-meta">’26.7~9 · 교수님 회사 의뢰 · 1인</p>
+          <ul class="tags"><li>CloudWatch</li><li>SNS</li><li>IAM</li><li>Chart.js</li></ul>
+        </div>
+      </article>
+      <article class="proj" data-cat="front">
+        <div class="proj-img"><img src="img/t-flowtimer.jpg" alt="FlowTimer 타이머 화면" width="640" height="400" loading="lazy"></div>
+        <div class="proj-body">
+          <h3>FlowTimer <span>집중 타이머</span></h3>
+          <p>웹·Windows 앱·Chrome 확장이 같은 타이머 코어를 씁니다. Jest 52개.</p>
+          <p class="proj-meta">’26.3~6 · 개인 개발</p>
+          <ul class="tags"><li>JavaScript</li><li>Electron</li><li>Web Audio</li><li>Jest</li></ul>
+          <div class="proj-links"><a href="https://poro832.github.io/FlowTimer/">데모 <span aria-hidden="true">↗</span></a><a href="https://github.com/poro832/FlowTimer">GitHub <span aria-hidden="true">↗</span></a></div>
+        </div>
+      </article>
+      <article class="proj" data-cat="front">
+        <div class="proj-img proj-cover" aria-hidden="true"><span class="cover-logos"><img src="img/tech/react.svg" alt="" width="40" height="40"></span><span class="cover-text">AI 채용 추천 서비스</span></div>
+        <div class="proj-body">
+          <h3>YourConnect <span>AI 채용 추천</span></h3>
+          <p>로그인·프로필·멘토링·스펙 화면을 React로 만들고 API와 연결했습니다.</p>
+          <p class="proj-meta">’25.9~’26.6 · 기여도 약 50% · 창업경진대회 우수상</p>
+          <ul class="tags"><li>React</li><li>JavaScript</li><li>Django REST API</li></ul>
+          <div class="proj-links"><a href="https://github.com/2025-CAPSTONEpj/YourConnect">GitHub <span aria-hidden="true">↗</span></a></div>
+        </div>
+      </article>
+    </div>
   </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" class="sec alt">
-  <div class="wrap contact">
-    <h2 class="reveal">연락</h2>
-    <p class="lead reveal">함께 일할 기회를 기다리고 있습니다. 편하게 연락 주세요.</p>
-    <div class="cta reveal">
-      <a class="btn primary" href="mailto:ldd0826@naver.com">ldd0826@naver.com</a>
-      <a class="btn" href="https://github.com/poro832" target="_blank" rel="noopener">github.com/poro832</a>
-      <a class="btn" href="https://zrr.kr/JguHxu" target="_blank" rel="noopener">Notion 정리 공간</a>
+<!-- Deep dive -->
+<section class="sec sec-alt" id="deep-dive" aria-labelledby="dd-h">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <h2 id="dd-h">Deep <em>Dive</em></h2>
+      <p>세 프로젝트의 핵심 설계를 직접 움직여 볼 수 있습니다.</p>
+    </div>
+    <div class="dd-tabs" role="tablist" aria-label="깊이 보기" data-reveal>
+      <button type="button" role="tab" id="tab-voice" aria-controls="pane-voice" aria-selected="true">늘봄 · 음성 AI</button>
+      <button type="button" role="tab" id="tab-doc" aria-controls="pane-doc" aria-selected="false" tabindex="-1">LittleBoss · 문서 AI</button>
+      <button type="button" role="tab" id="tab-flow" aria-controls="pane-flow" aria-selected="false" tabindex="-1">에이전트 · 검증</button>
+    </div>
+
+    <div class="dd-pane" id="pane-voice" role="tabpanel" aria-labelledby="tab-voice">
+      <div class="dd-text">
+        <h3>LLM은 대화만,<br>판단은 규칙이.</h3>
+        <ul class="points">
+          <li><b>듣기 → 답하기 → 말하기</b>CLOVA Speech → CLOVA Studio → 프레소디. 세 서비스는 규약으로 받아 키 없이 테스트합니다.</li>
+          <li><b>점수에 LLM을 쓰지 않음</b>통화 후 녹음 전체를 다시 분석한 지표와 규칙으로만 계산. 같은 녹음 100번 → 같은 결과.</li>
+          <li><b>모델 출력은 검증 후 저장</b>건강 언급은 발화 원문만, 진단 표현이 섞인 요약은 버립니다.</li>
+          <li><b>비용 5분의 1</b>월 약 99,000원(CLOVA Voice) → 19,800원(프레소디).</li>
+        </ul>
+      </div>
+      <figure class="win" data-cycle aria-label="안부 전화 한 번의 흐름 예시">
+        <div class="win-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="win-title">안부 전화 한 번의 흐름</span><span class="win-note">가상 대화</span></div>
+        <div class="win-body">
+          <div class="cols">
+            <div class="wcol">
+              <p class="wcol-h">통화 중 · 실시간</p>
+              <div class="wcard step"><span class="who">어르신</span><p>오늘은 무릎이 좀 쑤시네.</p><span class="chip">듣기 · CLOVA Speech</span></div>
+              <div class="wcard step"><span class="who who-ai">AI</span><p>무릎이 쑤시셨군요. 오늘 많이 걸으셨어요?</p><span class="chip">답하기 · CLOVA Studio</span></div>
+              <div class="wcard step"><span class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="chip">말하기 · Prosody</span></div>
+            </div>
+            <div class="wcol">
+              <p class="wcol-h">통화 후 · 점수</p>
+              <div class="wrow step"><span class="ck" aria-hidden="true"></span>녹음 전체를 다시 분석</div>
+              <div class="wrow step"><span class="ck" aria-hidden="true"></span>발화 · 침묵 · 응답 지연</div>
+              <div class="wrow step"><span class="ck" aria-hidden="true"></span>점수는 규칙으로 계산</div>
+              <div class="wtag step"><b>LLM 미사용</b>100번 분석해도 같은 결과</div>
+            </div>
+            <div class="wcol">
+              <p class="wcol-h">통화 후 · 기록</p>
+              <div class="wcard step"><span class="k">건강 언급 · 몸 · 안 좋다</span><p>“오늘은 무릎이 좀 쑤시네.”</p><span class="chip chip-ok">발화 원문만 저장</span></div>
+              <div class="wcard step"><span class="k">약 복용</span><p>모름</p><span class="chip chip-ok">먹었다 · 안 먹었다 · 모름</span></div>
+              <div class="wcard step"><span class="k">통화 요약</span><p>진단 표현이 섞이면 버림</p></div>
+            </div>
+          </div>
+        </div>
+      </figure>
+    </div>
+
+    <div class="dd-pane" id="pane-doc" role="tabpanel" aria-labelledby="tab-doc" hidden>
+      <div class="dd-text">
+        <h3>서류 한 장을<br>할 일로 바꿉니다.</h3>
+        <ul class="points">
+          <li><b>Textract가 읽고, Claude가 정리</b>글자와 표를 뽑아 Bedrock Claude가 정해진 JSON으로. 결과는 체크리스트·캘린더·알림으로.</li>
+          <li><b>응답이 깨져도 화면은 그대로</b>코드블록 제거 → JSON 범위만 재파싱 → 기본값.</li>
+          <li><b>모델은 환경변수 하나로 교체</b>로컬은 Gemini, 운영은 Bedrock Claude.</li>
+          <li><b>큰 문서도 업로드</b>API Gateway 10MB 제한을 피해 S3에 바로, 50MB 사전 확인.</li>
+        </ul>
+      </div>
+      <figure class="win" aria-label="AI 응답 파싱 순서 시연">
+        <div class="win-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="win-title">AI 응답 파싱 · 실제 코드와 같은 순서</span><span class="win-note">가상 응답</span></div>
+        <div class="win-body">
+          <div class="ptabs" role="group" aria-label="모델 응답 종류">
+            <button type="button" data-case="ok" aria-pressed="true">정상 JSON</button>
+            <button type="button" data-case="fence" aria-pressed="false">```json으로 감쌈</button>
+            <button type="button" data-case="prose" aria-pressed="false">설명이 섞임</button>
+            <button type="button" data-case="broken" aria-pressed="false">중간에 끊김</button>
+          </div>
+          <div class="pgrid">
+            <div class="wcol">
+              <p class="wcol-h">모델 응답</p>
+              <pre class="raw" id="raw"></pre>
+            </div>
+            <div class="wcol">
+              <p class="wcol-h">파싱 단계</p>
+              <ol class="stages">
+                <li data-st="1"><b>1</b><span>코드블록 표시를 지우고 파싱</span><em></em></li>
+                <li data-st="2"><b>2</b><span>첫 { 부터 마지막 } 까지만 파싱</span><em></em></li>
+                <li data-st="3"><b>3</b><span>기본값 돌려주기</span><em></em></li>
+              </ol>
+              <p class="wcol-h">화면에 보이는 결과</p>
+              <div class="out" id="out" aria-live="polite"></div>
+            </div>
+          </div>
+        </div>
+      </figure>
+    </div>
+
+    <div class="dd-pane" id="pane-flow" role="tabpanel" aria-labelledby="tab-flow" hidden>
+      <div class="dd-text">
+        <h3>AI의 답은<br>테스트로 끝을 봅니다.</h3>
+        <ul class="points">
+          <li><b>Keel</b>경로 선언 · 범위 밖이면 정지 · 가설은 하나 · 명령 출력 없이는 ‘완료’ 없음.</li>
+          <li><b>StudyReel</b>Gemini 토큰 한도를 실측해 Shorts 피드로 전환하고 ADR로 기록. 규칙은 <code>AGENTS.md</code> 한 파일에.</li>
+          <li><b>3DayOfAI</b>30일 과정을 3일로. 챗봇 → RAG → 에이전트 실습 32개.</li>
+        </ul>
+      </div>
+      <figure class="win" data-cycle aria-label="에이전트와 일하는 규칙">
+        <div class="win-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="win-title">에이전트와 일하는 규칙</span><span class="win-note">Keel · StudyReel · 3DayOfAI</span></div>
+        <div class="win-body">
+          <div class="cols">
+            <div class="wcol">
+              <p class="wcol-h">Keel · 작업 한 번</p>
+              <div class="wrow step"><span class="ck" aria-hidden="true"></span><span>경로 선언<code>Route: execute → review-verify</code></span></div>
+              <div class="wrow step"><span class="ck" aria-hidden="true"></span><span>계획은 네 줄<code>Files · Changes · Verification · Risk</code></span></div>
+              <div class="wrow step"><span class="ck" aria-hidden="true"></span><span>범위 정지<small>요청 밖 파일이면 멈춤</small></span></div>
+              <div class="wrow step"><span class="ck" aria-hidden="true"></span><span>가설은 하나<code>Hypothesis · Test · Result</code></span></div>
+              <div class="wrow step"><span class="ck" aria-hidden="true"></span><span>증거 인용<small>명령 출력 없이 ‘완료’ 없음</small></span></div>
+            </div>
+            <div class="wcol">
+              <p class="wcol-h">StudyReel · 결정 기록</p>
+              <ol class="adr">
+                <li class="step"><b>0001</b>Flutter 채택</li>
+                <li class="step"><b>0002</b>Firebase Auth + Firestore</li>
+                <li class="step"><b>0003</b>Cloud Functions 미사용</li>
+                <li class="step hot"><b>0004</b>Gemini 카드 → Shorts<small>토큰 한도 실측 데이터</small></li>
+                <li class="step"><b>0005</b>인앱 iframe 재생</li>
+              </ol>
+            </div>
+            <div class="wcol">
+              <p class="wcol-h">3DayOfAI · 실습 32개</p>
+              <div class="wrow step"><span class="ck" aria-hidden="true"></span><span>30일 과정 → 3일 과정<small>날짜별 순서를 다시 정함</small></span></div>
+              <div class="wrow step"><span class="ck" aria-hidden="true"></span><span>문제 (problems)<small>코드 일부를 비운 실습</small></span></div>
+              <div class="wrow step"><span class="ck" aria-hidden="true"></span><span>정답 (solutions)<small>같은 실습의 완성 코드</small></span></div>
+              <p class="days-cap step">챗봇 → RAG → 에이전트<br>Streamlit · Snowflake Cortex</p>
+            </div>
+          </div>
+        </div>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- Experience -->
+<section class="sec" id="experience" aria-labelledby="exp-h">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <h2 id="exp-h"><em>Experience</em> &amp; Awards</h2>
+      <p>경력, 수상, 자격을 시간 순으로 정리했습니다.</p>
+    </div>
+    <ol class="timeline">
+      <li data-reveal><span class="tl-date">2026.07 – 09</span><div class="tl-card"><h3>LocalArchive 운영 모니터링</h3><p>교수님 회사 의뢰 · 1인 작업. CloudWatch 알람 6종, SNS 장애 메일, 운영현황 페이지.</p></div></li>
+      <li data-reveal><span class="tl-date">2026 춘계</span><div class="tl-card tl-hl"><h3>AI 융합 학술대회 최우수상</h3><p>한국인공지능융합기술학회 · LittleBoss로 논문 심사와 현장 발표.</p></div></li>
+      <li data-reveal><span class="tl-date">2026.01 – 02</span><div class="tl-card"><h3>NxtCloud 교육 인턴</h3><p>Technical Trainer 주니어. 대학 교직원·학생 AWS 실습 교육, AI 실습 32개 설계.</p></div></li>
+      <li data-reveal><span class="tl-date">2025.12</span><div class="tl-card"><h3>AWS Certified AI Practitioner</h3><p>AIF-C01 취득.</p></div></li>
+      <li data-reveal><span class="tl-date">2025</span><div class="tl-card"><h3>교내 창업경진대회 우수상</h3><p>YourConnect · AI 채용 추천 서비스의 프론트엔드.</p></div></li>
+      <li data-reveal><span class="tl-date">2024.09 –</span><div class="tl-card"><h3>학과 과대표</h3><p>신구대학교 컴퓨터소프트웨어과. 성적우수장학금 2회 · 모범장학금 3회.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="sec sec-alt" id="contact" aria-labelledby="contact-h">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <h2 id="contact-h">Get In <em>Touch</em></h2>
+      <p>AI 서비스를 함께 만들 기회를 찾고 있습니다.</p>
+    </div>
+    <div class="contact">
+      <div class="contact-info" data-reveal>
+        <h3>연락처</h3>
+        <p>모델이 틀려도, 서비스는 흔들리지 않게.<br>편하게 연락 주세요.</p>
+        <a class="c-card" href="mailto:ldd0826@naver.com"><span class="c-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 6.5h18v11H3z M3 7l9 6 9-6"/></svg></span><span><b>Email</b>ldd0826@naver.com</span></a>
+        <a class="c-card" href="https://github.com/poro832"><span class="c-ico" aria-hidden="true"><img src="img/tech/github.svg" alt="" width="20" height="20"></span><span><b>GitHub</b>github.com/poro832</span></a>
+        <a class="c-card" href="https://zrr.kr/JguHxu"><span class="c-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3h9l3 3v15H6z M9 9h6M9 13h6M9 17h4"/></svg></span><span><b>Notion</b>정리 공간</span></a>
+      </div>
+      <form class="contact-form" id="mailform" data-reveal>
+        <h3>메시지 보내기</h3>
+        <div class="f-row">
+          <label>이름<input name="name" type="text" autocomplete="name" placeholder="홍길동"></label>
+          <label>회사 · 소속<input name="org" type="text" autocomplete="organization" placeholder="회사명"></label>
+        </div>
+        <label>제목<input name="subject" type="text" placeholder="면접 제안"></label>
+        <label>내용<textarea name="message" rows="5" placeholder="전하실 말을 적어 주세요."></textarea></label>
+        <button class="btn btn-pri" type="submit">메일 앱으로 보내기 <span aria-hidden="true">→</span></button>
+        <p class="f-note">누르면 사용하시는 메일 앱이 열리고, 적은 내용이 채워집니다.</p>
+      </form>
     </div>
   </div>
 </section>
@@ -300,7 +464,14 @@
 </main>
 
 <footer class="foot">
-  <div class="wrap">© 2026 이동찬 · HTML/CSS/JS로 직접 만들고 GitHub Pages로 배포했습니다.</div>
+  <div class="wrap foot-in">
+    <a class="logo" href="#home">Dongchan<b>Lee</b></a>
+    <div class="foot-links">
+      <a href="https://github.com/poro832" aria-label="GitHub"><img src="img/tech/github.svg" alt="" width="18" height="18"></a>
+      <a href="mailto:ldd0826@naver.com" aria-label="이메일"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5h18v11H3z M3 7l9 6 9-6"/></svg></a>
+    </div>
+    <p>© 2026 이동찬 · HTML/CSS/JS로 직접 만들었습니다</p>
+  </div>
 </footer>
 
 <script src="script.js"></script>
