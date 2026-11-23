@@ -91,16 +91,12 @@ code { font-family: ui-monospace, Consolas, monospace; font-size: .86em; backgro
   position: relative; overflow: hidden;
   padding: 116px 0 72px;
   background:
-    radial-gradient(900px 560px at 70% 42%, rgba(77, 141, 255, .14), transparent 70%),
+    radial-gradient(900px 560px at 70% 42%, rgba(77, 141, 255, .08), transparent 70%),
+    radial-gradient(520px 380px at 86% 20%, rgba(124, 92, 255, .1), transparent 70%),
+    radial-gradient(480px 360px at 56% 82%, rgba(54, 194, 240, .06), transparent 70%),
     radial-gradient(420px 300px at 8% 85%, rgba(54, 194, 240, .07), transparent 70%);
 }
-.hero::before {
-  content: ""; position: absolute; inset: 0; pointer-events: none;
-  background-image: radial-gradient(rgba(148, 163, 184, .18) 1px, transparent 1px);
-  background-size: 28px 28px;
-  -webkit-mask-image: radial-gradient(ellipse 60% 60% at 70% 45%, #000 25%, transparent 75%);
-  mask-image: radial-gradient(ellipse 60% 60% at 70% 45%, #000 25%, transparent 75%);
-}
+.stars { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
 .hero-in {
   position: relative; display: grid; grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr); align-items: center; gap: 12px 24px;
 }
@@ -121,41 +117,34 @@ code { font-family: ui-monospace, Consolas, monospace; font-size: .86em; backgro
 .hero-line { margin-top: 18px; font-size: 1.05rem; color: var(--muted); }
 .hero-cta { margin-top: 32px; display: flex; flex-wrap: wrap; gap: 14px; }
 
-/* 3D orbit: a planet turning on a tilted axis (CSS 3D) and two rings of the tools actually used.
-   The rings are drawn by script so a logo can shrink and fade as it goes behind the planet
-   and come forward larger, and so its path splits into a back half and a front half. */
 .orbit { position: relative; z-index: 1; height: 700px; }
 .orbit::before, .orbit::after {
   content: ""; position: absolute; left: 50%; top: 50%; border-radius: 50%; pointer-events: none;
 }
 .orbit::before {
-  width: 940px; height: 940px; margin: -470px;
-  background: radial-gradient(circle, rgba(77, 141, 255, .2), rgba(54, 194, 240, .05) 45%, transparent 70%);
+  width: 1100px; height: 1100px; margin: -550px;
+  background: radial-gradient(circle closest-side, rgba(77, 141, 255, .14) 30%, rgba(77, 141, 255, .09) 36%, rgba(70, 160, 250, .055) 44%,
+    rgba(62, 175, 245, .03) 54%, rgba(54, 194, 240, .015) 66%, rgba(54, 194, 240, .006) 80%, transparent 100%);
 }
 .orbit::after {
-  width: 520px; height: 520px; margin: -260px;
-  background: radial-gradient(circle, rgba(77, 141, 255, .45) 30%, rgba(54, 194, 240, .14) 52%, transparent 70%);
+  width: 700px; height: 700px; margin: -350px;
+  background: radial-gradient(circle closest-side, rgba(77, 141, 255, .1) 50%, rgba(77, 141, 255, .05) 60%, rgba(54, 194, 240, .02) 74%, transparent 100%);
   animation: glow 4.5s ease-in-out infinite;
 }
-@keyframes glow { 50% { opacity: .6; scale: 1.06; } }
+@keyframes glow { 50% { opacity: .55; } }
 .orbit-stage {
   position: absolute; left: 50%; top: 50%; width: 0; height: 0; isolation: isolate;
   transform: scale(var(--k, 1));
 }
-.paths { position: absolute; left: 0; top: 0; overflow: visible; }
-.paths path { fill: none; stroke-linecap: round; }
-.paths-back { z-index: 1; }
-.paths-front { z-index: 4; }
-.paths-back .p0 { stroke: rgba(77, 141, 255, .22); stroke-width: 1.2; }
-.paths-front .p0 { stroke: rgba(77, 141, 255, .6); stroke-width: 1.6; }
-.paths-back .p1 { stroke: rgba(54, 194, 240, .16); stroke-width: 1.2; stroke-dasharray: 4 7; }
-.paths-front .p1 { stroke: rgba(54, 194, 240, .5); stroke-width: 1.4; stroke-dasharray: 4 7; }
+.trail { position: absolute; left: -480px; top: -260px; width: 960px; height: 520px; pointer-events: none; }
+.trail-back { z-index: -20; }
+.trail-front { z-index: 4; }
 .sat {
   position: absolute; display: grid; place-items: center; background: #f3f6fb; will-change: transform, opacity;
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, .65), 0 10px 22px -8px rgba(0, 0, 0, .7), 0 0 22px rgba(77, 141, 255, .45);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, .65), 0 10px 22px -8px rgba(0, 0, 0, .7), 0 0 10px rgba(77, 141, 255, .22);
 }
 .sat-ai { width: 56px; height: 56px; left: -28px; top: -28px; border-radius: 15px; }
-.sat-dev { width: 46px; height: 46px; left: -23px; top: -23px; border-radius: 13px; box-shadow: 0 0 0 1px rgba(255, 255, 255, .55), 0 10px 20px -8px rgba(0, 0, 0, .7), 0 0 16px rgba(54, 194, 240, .4); }
+.sat-dev { width: 46px; height: 46px; left: -23px; top: -23px; border-radius: 13px; box-shadow: 0 0 0 1px rgba(255, 255, 255, .55), 0 10px 20px -8px rgba(0, 0, 0, .7), 0 0 8px rgba(54, 194, 240, .2); }
 .sat-ai img { width: 30px; height: 30px; }
 .sat-dev img { width: 26px; height: 26px; }
 html:not(.orbit-on) .sat { display: none; }
@@ -184,6 +173,9 @@ html:not(.orbit-on) .sat { display: none; }
    23.4° axis; each name tag rides its continent and fades as the land slips behind the rim */
 .orb { overflow: hidden; }
 .earth { position: absolute; inset: 0; width: 100%; height: 100%; border-radius: 50%; }
+.earth-gl { display: none; position: absolute; left: calc(var(--R) * -.4); top: calc(var(--R) * -.4); width: calc(var(--R) * 2.8); height: calc(var(--R) * 2.8); pointer-events: none; }
+.planet.gl .earth-gl { display: block; }
+.planet.gl .orb { visibility: hidden; }
 .city { position: absolute; left: 0; top: 0; z-index: 3; pointer-events: none; will-change: transform, opacity; }
 .city b {
   position: absolute; left: 0; top: 0; transform: translate(-50%, -50%); white-space: nowrap;
@@ -193,20 +185,26 @@ html:not(.orbit-on) .sat { display: none; }
 }
 html:not(.orbit-on) .city { display: none; }
 
+.planet.decal .planet-mark { visibility: hidden; }
 .planet-mark {
   position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center;
   transform: translateZ(1px); pointer-events: none;
 }
 /* the mark is painted on the planet: lit from above like the sphere, with a short emboss rather than a floating slab */
 .orb-mark {
-  font-family: var(--head); font-size: 5.7rem; font-weight: 700; letter-spacing: .02em; line-height: 1;
+  margin-top: -14px; font-family: var(--head); font-size: 5.7rem; font-weight: 700; letter-spacing: .02em; line-height: 1;
   background: linear-gradient(180deg, #ffffff 0%, #d7e6ff 45%, #8fb6ff 100%);
   -webkit-background-clip: text; background-clip: text; color: transparent;
-  filter: drop-shadow(0 2px 0 rgba(20, 50, 130, .9)) drop-shadow(0 4px 6px rgba(2, 6, 20, .55)) drop-shadow(0 0 18px rgba(77, 141, 255, .55));
+  filter: drop-shadow(0 2px 0 rgba(20, 50, 130, .9)) drop-shadow(0 4px 6px rgba(2, 6, 20, .55)) drop-shadow(0 0 18px rgba(77, 141, 255, .5));
 }
 .orb-sub {
-  margin-top: 14px; font-family: var(--head); font-size: .8rem; font-weight: 700; letter-spacing: .16em; color: #cfe2ff;
-  text-shadow: 0 1px 0 rgba(20, 50, 130, .9), 0 0 10px rgba(77, 141, 255, .6);
+  position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible;
+  filter: drop-shadow(0 1px 0 rgba(20, 50, 130, .9)) drop-shadow(0 0 8px rgba(77, 141, 255, .6));
+}
+.orb-sub text { font-family: var(--head); font-size: 13.5px; font-weight: 700; letter-spacing: .2em; fill: #dbe9ff; }
+.planet:not(.gl)::before {
+  content: ''; position: absolute; inset: -16px; border-radius: 50%; pointer-events: none;
+  background: radial-gradient(circle closest-side, transparent 88%, rgba(110, 190, 255, .5) 91.5%, rgba(77, 141, 255, .16) 96%, transparent 100%);
 }
 
 .stats { grid-column: 1 / -1; list-style: none; padding: 0; margin: 20px 0 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }

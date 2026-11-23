@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 </noscript>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=20261123p">
 </head>
 <body>
 <a class="skip" href="#main">본문으로 건너뛰기</a>
@@ -41,6 +41,7 @@
 
 <!-- Home -->
 <section class="hero" id="home">
+  <canvas class="stars" aria-hidden="true"></canvas>
   <div class="wrap hero-in">
     <div class="hero-copy">
     <p class="badge">AI Service Developer</p>
@@ -56,22 +57,22 @@
     </div>
     <div class="orbit" role="img" aria-label="DC 행성이 지구처럼 자전하며, 늘봄·LittleBoss 등 직접 만든 프로젝트가 대륙으로 지나가고, 그 둘레로 AI 모델과 개발 도구 로고가 궤도를 도는 3D 그림.">
     <div class="orbit-stage" aria-hidden="true">
-      <svg class="paths paths-back" width="1" height="1" overflow="visible"></svg>
+      <canvas class="trail trail-back"></canvas>
       <div class="planet">
         <div class="globe3d">
-          <div class="orb"><canvas class="earth" width="700" height="700"></canvas></div>
-          <div class="planet-mark"><span class="orb-mark">DC</span><span class="orb-sub">AI SERVICE DEVELOPER</span></div>
+          <div class="orb"><canvas class="earth" width="700" height="700"></canvas></div><canvas class="earth-gl"></canvas>
+          <div class="planet-mark"><span class="orb-mark">DC</span><svg class="orb-sub" viewBox="0 0 350 350"><defs><path id="orb-arc" d="M 52 240 A 150 62 0 0 0 298 240"/></defs><text text-anchor="middle"><textPath href="#orb-arc" startOffset="50%">AI SERVICE DEVELOPER</textPath></text></svg></div>
         </div>
       </div>
-      <span class="city" data-lon="0" data-lat="20" data-size="40" data-tone="0"><b>늘봄</b></span>
-      <span class="city" data-lon="78" data-lat="-16" data-size="42" data-tone="1"><b>LittleBoss</b></span>
-      <span class="city" data-lon="150" data-lat="30" data-size="30" data-tone="2"><b>StudyReel</b></span>
-      <span class="city" data-lon="200" data-lat="-30" data-size="21" data-tone="0"><b>Keel</b></span>
-      <span class="city" data-lon="236" data-lat="18" data-size="28" data-tone="1"><b>3DayOfAI</b></span>
-      <span class="city" data-lon="280" data-lat="-30" data-size="27" data-tone="2"><b>LocalArchive</b></span>
-      <span class="city" data-lon="312" data-lat="50" data-size="20" data-tone="1"><b>FlowTimer</b></span>
-      <span class="city" data-lon="28" data-lat="-50" data-size="23" data-tone="2"><b>YourConnect</b></span>
-      <svg class="paths paths-front" width="1" height="1" overflow="visible"></svg>
+      <span class="city" data-lon="0" data-lat="20" data-size="38" data-tone="0"><b>늘봄</b></span>
+      <span class="city" data-lon="98" data-lat="36" data-size="40" data-tone="1"><b>LittleBoss</b></span>
+      <span class="city" data-lon="201" data-lat="11" data-size="29" data-tone="2"><b>StudyReel</b></span>
+      <span class="city" data-lon="251" data-lat="-37" data-size="20" data-tone="0"><b>Keel</b></span>
+      <span class="city" data-lon="279" data-lat="36" data-size="27" data-tone="1"><b>3DayOfAI</b></span>
+      <span class="city" data-lon="142" data-lat="-38" data-size="26" data-tone="2"><b>LocalArchive</b></span>
+      <span class="city" data-lon="329" data-lat="-40" data-size="19" data-tone="1"><b>FlowTimer</b></span>
+      <span class="city" data-lon="54" data-lat="-36" data-size="22" data-tone="2"><b>YourConnect</b></span>
+      <canvas class="trail trail-front"></canvas>
       <span class="sat sat-ai" data-ring="0" title="Amazon Bedrock"><img src="img/tech/aws.svg" alt="" width="30" height="30"></span>
       <span class="sat sat-ai" data-ring="0" title="Claude"><img src="img/tech/claude.svg" alt="" width="30" height="30"></span>
       <span class="sat sat-ai" data-ring="0" title="Gemini"><img src="img/tech/googlegemini.svg" alt="" width="30" height="30"></span>
@@ -474,6 +475,6 @@
   </div>
 </footer>
 
-<script src="script.js"></script>
+<script src="script.js?v=20261123p"></script>
 </body>
 </html>
